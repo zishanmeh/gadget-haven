@@ -1,0 +1,172 @@
+{
+  "gadgets": [
+    {
+      "product_id": 1,
+      "product_title": "Smartphone Pro Max",
+      "product_image": "smartphone_pro_max.jpg",
+      "category": "Smartphones",
+      "price": 999,
+      "description": "High-end smartphone with an advanced processor and high-quality camera.",
+      "specification": [
+        "6.7-inch OLED display",
+        "128GB storage",
+        "12MP + 12MP dual rear cameras",
+        "5G support"
+      ],
+      "availability": true,
+      "rating": 4.8,
+      "color": "Black"
+    },
+    {
+      "product_id": 2,
+      "product_title": "Smartphone Lite",
+      "product_image": "smartphone_lite.jpg",
+      "category": "Smartphones",
+      "price": 599,
+      "description": "Affordable smartphone with great features and a smooth display.",
+      "specification": [
+        "6.1-inch LCD display",
+        "64GB storage",
+        "12MP rear camera",
+        "4G support"
+      ],
+      "availability": true,
+      "rating": 4.5,
+      "color": "Blue"
+    },
+    {
+      "product_id": 3,
+      "product_title": "Smartphone Ultra",
+      "product_image": "smartphone_ultra.jpg",
+      "category": "Smartphones",
+      "price": 899,
+      "description": "Premium smartphone with stunning display and fast performance.",
+      "specification": [
+        "6.5-inch AMOLED display",
+        "256GB storage",
+        "48MP triple rear camera",
+        "5G support"
+      ],
+      "availability": true,
+      "rating": 4.7,
+      "color": "Silver"
+    },
+    {
+      "product_id": 4,
+      "product_title": "Smartphone SE",
+      "product_image": "smartphone_se.jpg",
+      "category": "Smartphones",
+      "price": 499,
+      "description": "Compact smartphone with excellent performance at a lower cost.",
+      "specification": [
+        "5.5-inch Retina display",
+        "128GB storage",
+        "12MP rear camera",
+        "4G support"
+      ],
+      "availability": true,
+      "rating": 4.4,
+      "color": "Red"
+    },
+    {
+      "product_id": 5,
+      "product_title": "Smartphone Mini",
+      "product_image": "smartphone_mini.jpg",
+      "category": "Smartphones",
+      "price": 749,
+      "description": "Small yet powerful smartphone with a high-resolution display.",
+      "specification": [
+        "5.8-inch OLED display",
+        "128GB storage",
+        "12MP + 12MP dual rear cameras",
+        "5G support"
+      ],
+      "availability": false,
+      "rating": 4.6,
+      "color": "Green"
+    },
+    {
+      "product_id": 6,
+      "product_title": "Smartphone Plus",
+      "product_image": "smartphone_plus.jpg",
+      "category": "Smartphones",
+      "price": 799,
+      "description": "Mid-range smartphone with large display and great battery life.",
+      "specification": [
+        "6.3-inch LCD display",
+        "128GB storage",
+        "16MP dual rear cameras",
+        "5G support"
+      ],
+      "availability": true,
+      "rating": 4.5,
+      "color": "Gold"
+    },
+    {
+      "product_id": 7,
+      "product_title": "Tablet Pro",
+      "product_image": "tablet_pro.jpg",
+      "category": "Tablets",
+      "price": 799,
+      "description": "High-performance tablet perfect for multitasking and media consumption.",
+      "specification": [
+        "10.5-inch Retina display",
+        "256GB storage",
+        "12MP rear camera",
+        "Face ID"
+      ],
+      "availability": false,
+      "rating": 4.7,
+      "battery_life": "10 hours"
+    },
+    {
+      "product_id": 8,
+      "product_title": "Tablet Mini",
+      "product_image": "tablet_mini.jpg",
+      "category": "Tablets",
+      "price": 499,
+      "description": "Compact tablet with powerful performance and long battery life.",
+      "specification": [
+        "8.3-inch Retina display",
+        "64GB storage",
+        "8MP rear camera",
+        "Touch ID"
+      ],
+      "availability": true,
+      "rating": 4.6,
+      "weight": "300g"
+    },
+    {
+      "product_id": 9,
+      "product_title": "Wireless Earbuds",
+      "product_image": "wireless_earbuds.jpg",
+      "category": "Accessories",
+      "price": 149,
+      "description": "Noise-canceling wireless earbuds with excellent sound quality.",
+      "specification": [
+        "Bluetooth 5.0",
+        "24-hour battery life with case",
+        "Water-resistant"
+      ],
+      "availability": true,
+      "rating": 4.3,
+      "color": "White"
+    },
+    {
+      "product_id": 10,
+      "product_title": "Smartwatch Series 5",
+      "product_image": "smartwatch_series_5.jpg",
+      "category": "Accessories",
+      "price": 349,
+      "description": "Advanced smartwatch with fitness tracking and customizable watch faces.",
+      "specification": [
+        "1.5-inch OLED display",
+        "GPS and cellular",
+        "Heart rate monitor"
+      ],
+      "availability": true,
+      "rating": 4.7,
+      "water_resistance": "50 meters"
+    }
+  ]
+}
