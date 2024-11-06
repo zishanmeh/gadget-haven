@@ -4,7 +4,7 @@
       "product_id": 1,
       "product_title": "Smartphone Pro Max",
       "product_image": "smartphone_pro_max.jpg",
-      "category": "Smartphones",
+      "category": "smartphones",
       "price": 999,
       "description": "High-end smartphone with an advanced processor and high-quality camera.",
       "specification": [
@@ -21,7 +21,7 @@
       "product_id": 2,
       "product_title": "Smartphone Lite",
       "product_image": "smartphone_lite.jpg",
-      "category": "Smartphones",
+      "category": "smartphones",
       "price": 599,
       "description": "Affordable smartphone with great features and a smooth display.",
       "specification": [
@@ -38,7 +38,7 @@
       "product_id": 3,
       "product_title": "Smartphone Ultra",
       "product_image": "smartphone_ultra.jpg",
-      "category": "Smartphones",
+      "category": "smartphones",
       "price": 899,
       "description": "Premium smartphone with stunning display and fast performance.",
       "specification": [
@@ -55,7 +55,7 @@
       "product_id": 4,
       "product_title": "Smartphone SE",
       "product_image": "smartphone_se.jpg",
-      "category": "Smartphones",
+      "category": "smartphones",
       "price": 499,
       "description": "Compact smartphone with excellent performance at a lower cost.",
       "specification": [
@@ -72,7 +72,7 @@
       "product_id": 5,
       "product_title": "Smartphone Mini",
       "product_image": "smartphone_mini.jpg",
-      "category": "Smartphones",
+      "category": "smartphones",
       "price": 749,
       "description": "Small yet powerful smartphone with a high-resolution display.",
       "specification": [
@@ -89,7 +89,7 @@
       "product_id": 6,
       "product_title": "Smartphone Plus",
       "product_image": "smartphone_plus.jpg",
-      "category": "Smartphones",
+      "category": "smartphones",
       "price": 799,
       "description": "Mid-range smartphone with large display and great battery life.",
       "specification": [
@@ -106,7 +106,7 @@
       "product_id": 7,
       "product_title": "Tablet Pro",
       "product_image": "tablet_pro.jpg",
-      "category": "Tablets",
+      "category": "tablets",
       "price": 799,
       "description": "High-performance tablet perfect for multitasking and media consumption.",
       "specification": [
@@ -123,7 +123,7 @@
       "product_id": 8,
       "product_title": "Tablet Mini",
       "product_image": "tablet_mini.jpg",
-      "category": "Tablets",
+      "category": "tablets",
       "price": 499,
       "description": "Compact tablet with powerful performance and long battery life.",
       "specification": [
@@ -140,7 +140,7 @@
       "product_id": 9,
       "product_title": "Wireless Earbuds",
       "product_image": "wireless_earbuds.jpg",
-      "category": "Accessories",
+      "category": "accessories",
       "price": 149,
       "description": "Noise-canceling wireless earbuds with excellent sound quality.",
       "specification": [
@@ -156,7 +156,7 @@
       "product_id": 10,
       "product_title": "Smartwatch Series 5",
       "product_image": "smartwatch_series_5.jpg",
-      "category": "Accessories",
+      "category": "accessories",
       "price": 349,
       "description": "Advanced smartwatch with fitness tracking and customizable watch faces.",
       "specification": [

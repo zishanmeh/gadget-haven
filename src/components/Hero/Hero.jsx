@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import Banner from "../../assets/banner.jpg";
 const Hero = () => {
   return (
@@ -11,7 +12,7 @@ const Hero = () => {
       </p>
       <div className="text-center">
         <button className="bg-white py-2 px-4 rounded-full text-primaryColor font-bold">
-          Shop Now
+          <NavLink to="/dashboard">Shop Now</NavLink>
         </button>
       </div>
       <div className="absolute  -bottom-1/2 bg-whiteBg w-1/2 p-3 rounded-xl">
