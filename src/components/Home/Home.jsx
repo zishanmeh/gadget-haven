@@ -1,3 +1,4 @@
+import Category from "../Category/Category";
 import Gadgets from "../Gadgets/Gadgets";
 import Hero from "../Hero/Hero";
 

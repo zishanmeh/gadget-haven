@@ -1,9 +1,10 @@
 import { useContext } from "react";
 import { GadgetsContext } from "../Gadgets/Gadgets";
+import { GadgetCategoryContext } from "../Category/Category";
 import { Link } from "react-router-dom";
 
 const ShowGadgets = () => {
-  const gadget = useContext(GadgetsContext);
+  const gadget = useContext(GadgetCategoryContext);
 
   return (
     <div className="card bg-base-100 shadow-xl">

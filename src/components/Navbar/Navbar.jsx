@@ -54,8 +54,11 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end flex gap-3 items-center">
-        <button className="bg-white p-3 rounded-full">
+        <button className="bg-white p-3 rounded-full relative">
           <IoCartOutline size={15} className="text-primaryColor" />
+          <p className="absolute -top-3 right-0 bg-yellow-300 px-2 rounded-full text-black">
+            {0}
+          </p>
         </button>
         <button className="bg-white p-3 rounded-full">
           <FaHeart size={15} className="text-primaryColor" />

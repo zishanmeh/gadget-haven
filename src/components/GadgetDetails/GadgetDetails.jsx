@@ -1,6 +1,8 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { FaStar } from "react-icons/fa6";
-
+import { CiStar } from "react-icons/ci";
+import { IoCartOutline } from "react-icons/io5";
+import { CiHeart } from "react-icons/ci";
 const GadgetDetails = () => {
   const gadgets = useLoaderData();
   const { product_id } = useParams();
@@ -43,11 +45,11 @@ const GadgetDetails = () => {
       "availability": true,
       "rating": 4.7,
       "water_resistance": "50 meters" */}
-      <div className="hero bg-base-200 w-1/2 absolute -bottom-1/2 left-1/2 -translate-x-1/2">
-        <div className="hero-content flex-col lg:flex-row">
+      <div className="hero bg-base-200 w-3/4 absolute -bottom-full left-1/2 -translate-x-1/2 rounded-xl px-4">
+        <div className="hero-content flex-col gap-10 lg:flex-row">
           <img
             src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
-            className="max-w-sm rounded-lg shadow-2xl"
+            className="max-h-sm rounded-lg shadow-2xl"
           />
           <div className="flex flex-col gap-4">
             <h1 className="text-5xl font-bold">{gadget.product_title}</h1>
@@ -85,9 +87,18 @@ const GadgetDetails = () => {
                 <FaStar className="text-yellow-500"></FaStar>
                 <FaStar className="text-yellow-500"></FaStar>
                 <FaStar className="text-yellow-500"></FaStar>
+                <CiStar size={20} className=""></CiStar>
+                <button className="btn btn-xs">{rating}</button>
               </div>
             </div>
-            <button className="btn btn-primary w-fit">Get Started</button>
+            <div className="flex items-center gap-3">
+              <button className="btn btn-primary hover:bg-white hover:text-primaryColor bg-primaryColor border-primaryColor text-white w-fit">
+                Add to Cart <IoCartOutline size={20}></IoCartOutline>
+              </button>
+              <button className="p-2 rounded-full border border-primaryColor">
+                <CiHeart size={30} className="text-primaryColor"></CiHeart>
+              </button>
+            </div>
           </div>
         </div>
       </div>

@@ -20,10 +20,37 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+        children: [
+          {
+            path: "category/:category",
+            loader: async ({ params }) => {
+              const response = await fetch("/gadgets.json");
+              if (!response.ok) throw new Error("Failed to load gadgets data");
+
+              const data = await response.json();
+
+              // Filter gadgets based on the category from params
+              const { category } = params;
+              const filteredData =
+                category === "all"
+                  ? data.gadgets // Show all gadgets if category is "all"
+                  : data.gadgets.filter(
+                      (gadget) => gadget.category === category
+                    );
+
+              if (filteredData.length === 0) {
+                throw new Error("No gadgets found for this category");
+              }
+
+              return filteredData; // Return only the filtered data for the selected category
+            },
+            element: <Category />,
+          },
+        ],
       },
       {
         path: "/:product_id",
-        loader: ({ params }) => fetch("gadgets.json"),
+        loader: ({ params }) => fetch("/gadgets.json"),
         element: <GadgetDetails></GadgetDetails>,
       },
       {

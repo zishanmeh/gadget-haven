@@ -31,111 +31,18 @@ const Gadgets = () => {
         Explore Cutting-Edge Gadgets
       </h1>
       {/* Sidebar */}
-      <Tabs>
-        <div className="flex items-start my-20 gap-5">
-          <div className="w-[20%]">
-            <TabList className="flex flex-col">
-              <Tab>All Products</Tab>
-              <Tab>Phone</Tab>
-              <Tab>Tablets</Tab>
-              <Tab>Accessories</Tab>
-              <Tab>Laptops</Tab>
-            </TabList>
-          </div>
 
-          <div className="w-3/4">
-            <TabPanel className="w-full">
-              <div className="grid grid-cols-3 gap-6 justify-between w-full">
-                {allProducts.map((gadget) => (
-                  <GadgetsContext.Provider
-                    value={gadget}
-                    key={gadget.product_id}
-                  >
-                    <ShowGadgets></ShowGadgets>
-                  </GadgetsContext.Provider>
-                ))}
-              </div>
-            </TabPanel>
-            <TabPanel className="">
-              <div className="grid grid-cols-3 gap-6 justify-between">
-                {smartPhones.map((gadget) => (
-                  <GadgetsContext.Provider
-                    value={gadget}
-                    key={gadget.product_id}
-                  >
-                    <ShowGadgets></ShowGadgets>
-                  </GadgetsContext.Provider>
-                ))}
-              </div>
-            </TabPanel>
-            <TabPanel className="">
-              <div className="grid grid-cols-3 gap-6 justify-between">
-                {tablets.map((gadget) => (
-                  <GadgetsContext.Provider
-                    value={gadget}
-                    key={gadget.product_id}
-                  >
-                    <ShowGadgets></ShowGadgets>
-                  </GadgetsContext.Provider>
-                ))}
-              </div>
-            </TabPanel>
-            <TabPanel className="">
-              <div className="grid grid-cols-3 gap-6 justify-between">
-                {accessories.map((gadget) => (
-                  <GadgetsContext.Provider
-                    value={gadget}
-                    key={gadget.product_id}
-                  >
-                    <ShowGadgets></ShowGadgets>
-                  </GadgetsContext.Provider>
-                ))}
-              </div>
-            </TabPanel>
-            <TabPanel className="">
-              <div
-                className={
-                  laptops.length > 0
-                    ? "grid grid-cols-3 gap-6 justify-between"
-                    : "w-full text-center font-bold text-4xl"
-                }
-              >
-                {laptops.length > 0
-                  ? laptops.map((gadget) => (
-                      <GadgetsContext.Provider
-                        value={gadget}
-                        key={gadget.product_id}
-                      >
-                        <ShowGadgets></ShowGadgets>
-                      </GadgetsContext.Provider>
-                    ))
-                  : "No data found"}
-              </div>
-            </TabPanel>
-          </div>
+      <div className="flex justify-between gap-6">
+        <div className="flex flex-col gap-5 w-[20%]">
+          <NavLink to="/category/all">All</NavLink>
+          <NavLink to="/category/accessories">Accessories</NavLink>
+          <NavLink to="/category/smartphones">Accessories</NavLink>
+          <NavLink to="/category/tablets">Tablets</NavLink>
         </div>
-      </Tabs>
-      {/* <li>
-              <NavLink to="/category/all">All products</NavLink>
-            </li>
-            <li>
-              <NavLink to="/category/accessories">Accessories</NavLink>
-            </li>
-            <li>
-              <NavLink to="/category/tablets">Tablets</NavLink>
-            </li>
-            <li>
-              <NavLink to="/category/smartphones">SmartPhones</NavLink>
-            </li> */}
-      {/* Gadgets */}
-      {/* <div className="col-span-6">
-          <div className="grid grid-cols-3 gap-6 justify-between">
-            {data.gadgets.map(() => (
-              <h1>Hello</h1>
-            ))}
-          </div>
+        <div>
           <Outlet></Outlet>
-        </div> */}
+        </div>
+      </div>
     </div>
   );
 };
