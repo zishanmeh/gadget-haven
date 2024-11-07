@@ -9,8 +9,10 @@ import {
 } from "../../App";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import Image from "../../assets/Group.png";
+import { Link, useNavigate } from "react-router-dom";
 
 const Cart = () => {
+  const navigate = useNavigate();
   let cart = useContext(cartContext);
   const handleRemoveCart = useContext(handleRemoveCartContext);
   const handleSortByprice = useContext(handleSortBypriceContext);
@@ -84,7 +86,10 @@ const Cart = () => {
           <div className="modal-action">
             <form method="dialog">
               {/* if there is a button in form, it will close the modal */}
-              <button className="btn">Close</button>
+
+              <button className="btn" onClick={() => navigate("/category/all")}>
+                Close
+              </button>
             </form>
           </div>
         </div>
