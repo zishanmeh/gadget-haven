@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
-import { cartContext } from "../../App";
+import { cartContext, handleRemoveCartContext } from "../../App";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 
 const Cart = () => {
   const cart = useContext(cartContext);
+  const handleRemoveCart = useContext(handleRemoveCartContext);
   let totalPrice = 0;
   for (const c of cart) {
     totalPrice = totalPrice + c.price;
@@ -22,7 +23,7 @@ const Cart = () => {
           </button>
         </div>
       </div>
-      <div>
+      <div className="mt-10">
         {cart.length > 0
           ? cart.map((item, idx) => (
               <div
@@ -44,6 +45,7 @@ const Cart = () => {
                     size={30}
                     className="cursor-pointer"
                     color="red"
+                    onClick={() => handleRemoveCart(item)}
                   ></IoIosCloseCircleOutline>
                 </div>
               </div>
