@@ -3,6 +3,11 @@ import { FaStar } from "react-icons/fa6";
 import { CiStar } from "react-icons/ci";
 import { IoCartOutline } from "react-icons/io5";
 import { CiHeart } from "react-icons/ci";
+import { cartContext } from "../../App";
+import { handleCartContext } from "../../App";
+import { wishListContext } from "../../App";
+import { handleWishListContext } from "../../App";
+import { useContext } from "react";
 const GadgetDetails = () => {
   const gadgets = useLoaderData();
   const { product_id } = useParams();
@@ -18,8 +23,16 @@ const GadgetDetails = () => {
     rating,
     water_resistance,
   } = gadget;
-  const intRating = Math.floor(rating);
-  console.log(intRating);
+  const cart = useContext(cartContext);
+  const wishList = useContext(wishListContext);
+  const handleAddToCart = useContext(handleCartContext);
+  const handleWishList = useContext(handleWishListContext);
+
+  //   const addItemToCart = () => {
+  //     handleAddToCart(gadget);
+  //     console.log(cart);
+  //   };
+
   return (
     <div className="bg-primaryColor w-full mt-10 pt-7 pb-52 relative">
       <h1 className="text-4xl text-white font-bold text-center ">
@@ -92,10 +105,16 @@ const GadgetDetails = () => {
               </div>
             </div>
             <div className="flex items-center gap-3">
-              <button className="btn btn-primary hover:bg-white hover:text-primaryColor bg-primaryColor border-primaryColor text-white w-fit">
+              <button
+                onClick={() => handleAddToCart(gadget)}
+                className="btn btn-primary hover:bg-white hover:text-primaryColor bg-primaryColor border-primaryColor text-white w-fit"
+              >
                 Add to Cart <IoCartOutline size={20}></IoCartOutline>
               </button>
-              <button className="p-2 rounded-full border border-primaryColor">
+              <button
+                onClick={() => handleWishList(gadget)}
+                className="p-2 rounded-full border border-primaryColor"
+              >
                 <CiHeart size={30} className="text-primaryColor"></CiHeart>
               </button>
             </div>

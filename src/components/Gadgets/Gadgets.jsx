@@ -32,7 +32,7 @@ const Gadgets = () => {
       </h1>
       {/* Sidebar */}
 
-      <div className="flex justify-between gap-6">
+      <div className="flex justify-between gap-6 my-20">
         <div className="flex flex-col gap-5 w-[20%]">
           <NavLink to="/category/all">All</NavLink>
           <NavLink to="/category/accessories">Accessories</NavLink>

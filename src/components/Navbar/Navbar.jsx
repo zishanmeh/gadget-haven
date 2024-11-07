@@ -1,8 +1,11 @@
 import { NavLink } from "react-router-dom";
 import { IoCartOutline } from "react-icons/io5";
 import { FaHeart } from "react-icons/fa";
+import { cartContext } from "../../App";
+import { useContext } from "react";
 
 const Navbar = () => {
+  const cart = useContext(cartContext);
   return (
     <div className="navbar text-white bg-primaryColor">
       <div className="navbar-start">
@@ -57,7 +60,7 @@ const Navbar = () => {
         <button className="bg-white p-3 rounded-full relative">
           <IoCartOutline size={15} className="text-primaryColor" />
           <p className="absolute -top-3 right-0 bg-yellow-300 px-2 rounded-full text-black">
-            {0}
+            {cart.length}
           </p>
         </button>
         <button className="bg-white p-3 rounded-full">
