@@ -1,0 +1,35 @@
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import "react-tabs/style/react-tabs.css";
+import Cart from "../Cart/Cart";
+const Dashboard = () => {
+  return (
+    <div>
+      <Tabs>
+        <div className="bg-primaryColor text-white py-4 text-center">
+          <h1 className="text-4xl font-bold">Dashboard</h1>
+          <p className="lg:w-1/2 mx-auto my-4">
+            Explore the latest gadgets that will take your experience to the
+            next level. From smart devices to the coolest accessories, we have
+            it all!
+          </p>
+          <div>
+            <div>
+              <TabList className="border-none font-bold">
+                <Tab>Cart</Tab>
+                <Tab>WishList</Tab>
+              </TabList>
+            </div>
+          </div>
+        </div>
+        <div>
+          <TabPanel>
+            <Cart></Cart>
+          </TabPanel>
+          <TabPanel>Panel 2</TabPanel>
+        </div>
+      </Tabs>
+    </div>
+  );
+};
+
+export default Dashboard;

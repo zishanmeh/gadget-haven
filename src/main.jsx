@@ -10,7 +10,7 @@ import Accessories from "./components/Accessories/Accessories";
 import AllGadgets from "./components/AllGadgets/AllGadgets";
 import GadgetDetails from "./components/GadgetDetails/GadgetDetails";
 import Category from "./components/Category/Category";
-
+import Dashboard from "./components/Dashboard/Dashboard";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -22,7 +22,7 @@ const router = createBrowserRouter([
         element: <Home></Home>,
         children: [
           {
-            path: "category/:category",
+            path: "category/:category?",
             loader: async ({ params }) => {
               const response = await fetch("/gadgets.json");
               if (!response.ok) throw new Error("Failed to load gadgets data");
@@ -30,7 +30,7 @@ const router = createBrowserRouter([
               const data = await response.json();
 
               // Filter gadgets based on the category from params
-              const { category } = params;
+              const category = params.category || "all";
               const filteredData =
                 category === "all"
                   ? data.gadgets // Show all gadgets if category is "all"
@@ -55,7 +55,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/dashboard",
-        element: <h1>Dashboard</h1>,
+        element: <Dashboard></Dashboard>,
       },
       {
         path: "/statistics",
