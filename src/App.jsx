@@ -18,6 +18,7 @@ export const isAddingToWishListContext = createContext();
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Helmet } from "react-helmet-async";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -125,7 +126,7 @@ function App() {
                               value={isAddingToWishList}
                             >
                               <Navbar></Navbar>
-                              <Outlet></Outlet>,
+                              <Outlet></Outlet>,<Footer></Footer>
                               <ToastContainer />
                             </isAddingToWishListContext.Provider>
                           </handleRemoveWishListContext.Provider>
