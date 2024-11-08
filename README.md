@@ -4,7 +4,7 @@ Welcome to the **Gadget Store** project! This is a fully modern gadget store web
 
 ## 🚀 Live Demo
 
-Check out the live website here: [Live Gadget Store](zishan-gadget-haven.netlify.app)
+Check out the live website here: [Live Gadget Store](https://zishan-gadget-haven.netlify.app)
 
 ## 📄 Requirement Document
 
