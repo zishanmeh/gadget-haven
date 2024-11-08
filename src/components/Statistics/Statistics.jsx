@@ -5,8 +5,8 @@ const Statistics = () => {
       <Helmet>
         <title>Statistics</title>
       </Helmet>
-      <div>
-        <h1>No statistics available</h1>
+      <div className="min-h-72 flex justify-center items-center">
+        <h1 className="text-4xl font-bold">No statistics available</h1>
       </div>
     </HelmetProvider>
   );
