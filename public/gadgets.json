@@ -3,7 +3,7 @@
     {
       "product_id": 1,
       "product_title": "Smartphone Pro Max",
-      "product_image": "smartphone_pro_max.jpg",
+      "product_image": "https://i.ibb.co/p4NSf9z/S768x768-FWEBP.webp",
       "category": "smartphones",
       "price": 999,
       "description": "High-end smartphone with an advanced processor and high-quality camera.",
@@ -20,7 +20,7 @@
     {
       "product_id": 2,
       "product_title": "Smartphone Lite",
-      "product_image": "smartphone_lite.jpg",
+      "product_image": "https://i.ibb.co/NCB5DXp/4acd57a5205be692f9855383758fe199-600x600-85.png",
       "category": "smartphones",
       "price": 599,
       "description": "Affordable smartphone with great features and a smooth display.",
@@ -37,7 +37,7 @@
     {
       "product_id": 3,
       "product_title": "Smartphone Ultra",
-      "product_image": "smartphone_ultra.jpg",
+      "product_image": "https://i.ibb.co/FDsXwcz/f959b1108cf76b25037b3a38cee95f30-600x600-85.png",
       "category": "smartphones",
       "price": 899,
       "description": "Premium smartphone with stunning display and fast performance.",
@@ -54,7 +54,7 @@
     {
       "product_id": 4,
       "product_title": "Smartphone SE",
-      "product_image": "smartphone_se.jpg",
+      "product_image": "https://i.ibb.co/6sKPkH8/iphone-16-pro-finish-select-202409-6-9inch-blacktitanium-wid-5120-hei-2880-fmt-webp-qlt-70.webp",
       "category": "smartphones",
       "price": 499,
       "description": "Compact smartphone with excellent performance at a lower cost.",
@@ -71,7 +71,7 @@
     {
       "product_id": 5,
       "product_title": "Smartphone Mini",
-      "product_image": "smartphone_mini.jpg",
+      "product_image": "https://i.ibb.co/YD2hmzB/iphone-16-pro-max-desert-desktop1-Web-P-Format-488-context-b-WFzd-GVyf-HJvb3-R8-MTM5-ODZ8a-W1h-Z2-Uv.webp",
       "category": "smartphones",
       "price": 749,
       "description": "Small yet powerful smartphone with a high-resolution display.",
@@ -88,7 +88,7 @@
     {
       "product_id": 6,
       "product_title": "Smartphone Plus",
-      "product_image": "smartphone_plus.jpg",
+      "product_image": "https://i.ibb.co/pL8gngQ/S768x768-FWEBP.webp",
       "category": "smartphones",
       "price": 799,
       "description": "Mid-range smartphone with large display and great battery life.",
@@ -105,7 +105,7 @@
     {
       "product_id": 7,
       "product_title": "Tablet Pro",
-      "product_image": "tablet_pro.jpg",
+      "product_image": "https://i.ibb.co/gVStsRs/uk-galaxy-tab-s10-ultra-sm-x920-sm-x926bzareub-543691004-730-584-PNG.png",
       "category": "tablets",
       "price": 799,
       "description": "High-performance tablet perfect for multitasking and media consumption.",
@@ -122,7 +122,7 @@
     {
       "product_id": 8,
       "product_title": "Tablet Mini",
-      "product_image": "tablet_mini.jpg",
+      "product_image": "https://i.ibb.co/bKYzzLX/uk-galaxy-tab-s10-plus-sm-x820-sm-x820nzsreub-543693604-730-584-PNG.png",
       "category": "tablets",
       "price": 499,
       "description": "Compact tablet with powerful performance and long battery life.",
@@ -139,7 +139,7 @@
     {
       "product_id": 9,
       "product_title": "Wireless Earbuds",
-      "product_image": "wireless_earbuds.jpg",
+      "product_image": "https://i.ibb.co/8NJLm55/AI090000042792-White-1.jpg",
       "category": "accessories",
       "price": 149,
       "description": "Noise-canceling wireless earbuds with excellent sound quality.",
@@ -155,7 +155,7 @@
     {
       "product_id": 10,
       "product_title": "Smartwatch Series 5",
-      "product_image": "smartwatch_series_5.jpg",
+      "product_image": "https://i.ibb.co/LhrsPg5/AI090000043310-Black-Sport-Band-1.jpg",
       "category": "accessories",
       "price": 349,
       "description": "Advanced smartwatch with fitness tracking and customizable watch faces.",

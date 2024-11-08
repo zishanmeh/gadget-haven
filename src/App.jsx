@@ -40,13 +40,13 @@ function App() {
       console.warn("Gadget not found in cart");
     }
   };
-  const [isAddingToWishList, setIsAddingToWishList] = useState(false);
+  const [isAddingToWishList, setIsAddingToWishList] = useState(null);
   const handleWishList = async (gadget) => {
     if (!wishList.includes(gadget)) {
       const newWishProduct = [...wishList, gadget];
       setWishList(newWishProduct);
       toast.info(`${gadget.product_title} Added to wishlist.`);
-      setIsAddingToWishList(true);
+      setIsAddingToWishList(gadget.product_id);
     } else {
       toast.error(`${gadget.product_title} already in wishlist`);
     }

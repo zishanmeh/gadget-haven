@@ -36,7 +36,7 @@ const GadgetDetails = () => {
   //   };
 
   return (
-    <div className="bg-primaryColor w-full mt-10 pt-7 pb-52 relative">
+    <div className="bg-primaryColor w-full mt-10 pt-7 pb-52 relative mb-96">
       <h1 className="text-4xl text-white font-bold text-center ">
         Product details
       </h1>
@@ -44,27 +44,11 @@ const GadgetDetails = () => {
         Explore the latest gadgets that will take your experience to the next
         level. From smart devices to the coolest accessories, we have it all!
       </p>
-
-      {/* Product */}
-      {/*  "product_id": 10,
-      "product_title": "Smartwatch Series 5",
-      "product_image": "smartwatch_series_5.jpg",
-      "category": "Accessories",
-      "price": 349,
-      "description": "Advanced smartwatch with fitness tracking and customizable watch faces.",
-      "specification": [
-        "1.5-inch OLED display",
-        "GPS and cellular",
-        "Heart rate monitor"
-      ],
-      "availability": true,
-      "rating": 4.7,
-      "water_resistance": "50 meters" */}
       <div className="hero bg-base-200 w-3/4 absolute -bottom-full left-1/2 -translate-x-1/2 rounded-xl px-4">
-        <div className="hero-content flex-col gap-10 lg:flex-row">
+        <div className="hero-content flex-col justify-center items-center gap-10 lg:flex-row">
           <img
-            src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
-            className="max-h-sm rounded-lg shadow-2xl"
+            src={gadget.product_image}
+            className="max-h-sm max-w-sm rounded-xl shadow-2xl"
           />
           <div className="flex flex-col gap-4">
             <h1 className="text-5xl font-bold">{gadget.product_title}</h1>
@@ -118,7 +102,7 @@ const GadgetDetails = () => {
                 className={`p-2 rounded-full text-primaryColor border border-primaryColor ${
                   isAddingToWishList && "text-gray-500 border-gray-500"
                 }`}
-                disabled={isAddingToWishList}
+                disabled={isAddingToWishList === gadget.product_id}
               >
                 <CiHeart size={30} className=""></CiHeart>
               </button>

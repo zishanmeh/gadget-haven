@@ -10,9 +10,9 @@ const ShowGadgets = () => {
     <div className="card bg-base-100 shadow-xl">
       <figure className="px-10">
         <img
-          src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-          alt="Shoes"
-          className="rounded-xl"
+          src={gadget.product_image}
+          alt={gadget.product_title}
+          className="rounded-xl h-[200px]"
         />
       </figure>
       <div className="card-body items-start text-center">
