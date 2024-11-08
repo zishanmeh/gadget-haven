@@ -6,6 +6,7 @@ import { createContext } from "react";
 export const cartContext = createContext([]);
 export const handleCartContext = createContext(() => {});
 import { useNavigate } from "react-router-dom";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -19,14 +20,19 @@ const Home = () => {
     console.log("clicked");
   };
   return (
-    <div className="">
-      <cartContext.Provider value={cart}>
-        <handleCartContext.Provider value={handleAddToCart}>
-          <Hero></Hero>
-          <Gadgets></Gadgets>
-        </handleCartContext.Provider>
-      </cartContext.Provider>
-    </div>
+    <HelmetProvider>
+      <div className="">
+        <Helmet>
+          <title>Home</title>
+        </Helmet>
+        <cartContext.Provider value={cart}>
+          <handleCartContext.Provider value={handleAddToCart}>
+            <Hero></Hero>
+            <Gadgets></Gadgets>
+          </handleCartContext.Provider>
+        </cartContext.Provider>
+      </div>
+    </HelmetProvider>
   );
 };
 

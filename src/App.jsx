@@ -17,6 +17,7 @@ export const handleRemoveWishListContext = createContext(() => {});
 export const isAddingToWishListContext = createContext();
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Helmet } from "react-helmet-async";
 
 function App() {
   const [cart, setCart] = useState([]);
