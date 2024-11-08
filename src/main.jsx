@@ -38,10 +38,6 @@ const router = createBrowserRouter([
                       (gadget) => gadget.category === category
                     );
 
-              if (filteredData.length === 0) {
-                throw new Error("No gadgets found for this category");
-              }
-
               return filteredData; // Return only the filtered data for the selected category
             },
             element: <Category />,

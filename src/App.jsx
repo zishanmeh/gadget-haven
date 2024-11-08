@@ -12,6 +12,9 @@ export const handleSortBypriceContext = createContext(() => {});
 export const handlePurchaseContext = createContext(() => {});
 export const totalPriceContext = createContext();
 export const previousTotalPriceContext = createContext();
+export const handleAddToCartFromWishListContext = createContext(() => {});
+export const handleRemoveWishListContext = createContext(() => {});
+export const isAddingToWishListContext = createContext();
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -30,18 +33,50 @@ function App() {
       const newCart = [...cart];
       newCart.splice(gadgetIndex, 1);
       setCart(newCart);
-      toast.info(`${gadget.product_title} Removed from cart.`);
+      toast.warn(`${gadget.product_title} Removed from cart.`);
     } else {
       console.warn("Gadget not found in cart");
     }
   };
-  const handleWishList = (gadget) => {
+  const [isAddingToWishList, setIsAddingToWishList] = useState(false);
+  const handleWishList = async (gadget) => {
     if (!wishList.includes(gadget)) {
       const newWishProduct = [...wishList, gadget];
       setWishList(newWishProduct);
       toast.info(`${gadget.product_title} Added to wishlist.`);
+      setIsAddingToWishList(true);
     } else {
       toast.error(`${gadget.product_title} already in wishlist`);
+    }
+  };
+
+  const handleAddToCartFromWishList = (gadget) => {
+    const newCartProduct = [...cart, gadget];
+    setCart(newCartProduct);
+    toast.info(`${gadget.product_title} Added to cart.`);
+
+    const gadgetIndex = wishList.findIndex((item) => item === gadget);
+
+    if (gadgetIndex !== -1) {
+      const newCart = [...wishList];
+      newCart.splice(gadgetIndex, 1);
+      setWishList(newCart);
+      toast.warn(`${gadget.product_title} Removed from Wishlist.`);
+    } else {
+      console.warn("Gadget not found in cart");
+    }
+  };
+
+  const handleRemoveWishList = (gadget) => {
+    const gadgetIndex = wishList.findIndex((item) => item === gadget);
+
+    if (gadgetIndex !== -1) {
+      const newCart = [...wishList];
+      newCart.splice(gadgetIndex, 1);
+      setWishList(newCart);
+      toast.warn(`${gadget.product_title} Removed from Wishlist.`);
+    } else {
+      console.warn("Gadget not found in cart");
     }
   };
 
@@ -79,9 +114,21 @@ function App() {
                       <previousTotalPriceContext.Provider
                         value={previousTotalPrice}
                       >
-                        <Navbar></Navbar>
-                        <Outlet></Outlet>,
-                        <ToastContainer />
+                        <handleAddToCartFromWishListContext.Provider
+                          value={handleAddToCartFromWishList}
+                        >
+                          <handleRemoveWishListContext.Provider
+                            value={handleRemoveWishList}
+                          >
+                            <isAddingToWishListContext.Provider
+                              value={isAddingToWishList}
+                            >
+                              <Navbar></Navbar>
+                              <Outlet></Outlet>,
+                              <ToastContainer />
+                            </isAddingToWishListContext.Provider>
+                          </handleRemoveWishListContext.Provider>
+                        </handleAddToCartFromWishListContext.Provider>
                       </previousTotalPriceContext.Provider>
                     </totalPriceContext.Provider>
                   </handlePurchaseContext.Provider>

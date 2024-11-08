@@ -8,6 +8,7 @@ import { handleCartContext } from "../../App";
 import { wishListContext } from "../../App";
 import { handleWishListContext } from "../../App";
 import { useContext } from "react";
+import { isAddingToWishListContext } from "../../App";
 const GadgetDetails = () => {
   const gadgets = useLoaderData();
   const { product_id } = useParams();
@@ -27,6 +28,7 @@ const GadgetDetails = () => {
   const wishList = useContext(wishListContext);
   const handleAddToCart = useContext(handleCartContext);
   const handleWishList = useContext(handleWishListContext);
+  const isAddingToWishList = useContext(isAddingToWishListContext);
 
   //   const addItemToCart = () => {
   //     handleAddToCart(gadget);
@@ -113,9 +115,12 @@ const GadgetDetails = () => {
               </button>
               <button
                 onClick={() => handleWishList(gadget)}
-                className="p-2 rounded-full border border-primaryColor"
+                className={`p-2 rounded-full text-primaryColor border border-primaryColor ${
+                  isAddingToWishList && "text-gray-500 border-gray-500"
+                }`}
+                disabled={isAddingToWishList}
               >
-                <CiHeart size={30} className="text-primaryColor"></CiHeart>
+                <CiHeart size={30} className=""></CiHeart>
               </button>
             </div>
           </div>

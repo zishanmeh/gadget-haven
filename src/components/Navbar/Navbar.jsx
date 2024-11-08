@@ -3,11 +3,20 @@ import { IoCartOutline } from "react-icons/io5";
 import { FaHeart } from "react-icons/fa";
 import { cartContext } from "../../App";
 import { useContext } from "react";
+import { useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const cart = useContext(cartContext);
+  const location = useLocation();
+  const pathName = location.pathname;
   return (
-    <div className="navbar text-white bg-primaryColor">
+    <div
+      className={`${
+        pathName === "/category/all" || pathName === "/"
+          ? "navbar text-white bg-primaryColor"
+          : "navbar text-gray-700 bg-white"
+      }`}
+    >
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

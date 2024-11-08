@@ -45,33 +45,35 @@ const Cart = () => {
         </div>
       </div>
       <div className="mt-10">
-        {cart.length > 0
-          ? cart.map((item, idx) => (
-              <div
-                key={idx}
-                className="flex gap-5 items-center mb-5 shadow-lg p-4 rounded-lg"
-              >
-                <div>
-                  <img src={item.product_image} alt={item.product_title} />
-                </div>
-                <div className="flex justify-between w-full">
-                  <div>
-                    <h1 className="text-xl font-bold">{item.product_title}</h1>
-                    <p className="text-sm text-gray-600 my-4">
-                      {item.description}
-                    </p>
-                    <p className="font-bold text-lg">Price: ${item.price}</p>
-                  </div>
-                  <IoIosCloseCircleOutline
-                    size={30}
-                    className="cursor-pointer"
-                    color="red"
-                    onClick={() => handleRemoveCart(item)}
-                  ></IoIosCloseCircleOutline>
-                </div>
+        {cart.length > 0 ? (
+          cart.map((item, idx) => (
+            <div
+              key={idx}
+              className="flex gap-5 items-center mb-5 shadow-lg p-4 rounded-lg"
+            >
+              <div>
+                <img src={item.product_image} alt={item.product_title} />
               </div>
-            ))
-          : "No Data Found"}
+              <div className="flex justify-between w-full">
+                <div>
+                  <h1 className="text-xl font-bold">{item.product_title}</h1>
+                  <p className="text-sm text-gray-600 my-4">
+                    {item.description}
+                  </p>
+                  <p className="font-bold text-lg">Price: ${item.price}</p>
+                </div>
+                <IoIosCloseCircleOutline
+                  size={30}
+                  className="cursor-pointer"
+                  color="red"
+                  onClick={() => handleRemoveCart(item)}
+                ></IoIosCloseCircleOutline>
+              </div>
+            </div>
+          ))
+        ) : (
+          <h1 className="text-center font-bold text-4xl">No data found</h1>
+        )}
       </div>
       {/* Open the modal using document.getElementById('ID').showModal() method */}
 

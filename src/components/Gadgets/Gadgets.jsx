@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import ShowGadgets from "../ShowGadgets/ShowGadgets";
 import { createContext } from "react";
 export const GadgetsContext = createContext({});
+import "./Gadegts.css";
 
 const Gadgets = () => {
   const [allProducts, setAllProducts] = useState([]);
@@ -32,12 +33,38 @@ const Gadgets = () => {
       </h1>
       {/* Sidebar */}
 
-      <div className="flex justify-between gap-6 my-20">
+      <div className="flex gap-10 my-20">
         <div className="flex flex-col gap-5 w-[20%]">
-          <NavLink to="/category/all">All</NavLink>
-          <NavLink to="/category/accessories">Accessories</NavLink>
-          <NavLink to="/category/smartphones">Accessories</NavLink>
-          <NavLink to="/category/tablets">Tablets</NavLink>
+          <NavLink
+            className="bg-gray-300 px-3 py-2 rounded-full text-center"
+            to="/category/all"
+          >
+            All
+          </NavLink>
+          <NavLink
+            className="bg-gray-300 px-3 py-2 rounded-full text-center"
+            to="/category/accessories"
+          >
+            Accessories
+          </NavLink>
+          <NavLink
+            className="bg-gray-300 px-3 py-2 rounded-full text-center"
+            to="/category/smartphones"
+          >
+            Smartphones
+          </NavLink>
+          <NavLink
+            className="bg-gray-300 px-3 py-2 rounded-full text-center"
+            to="/category/tablets"
+          >
+            Tablets
+          </NavLink>
+          <NavLink
+            className="bg-gray-300 px-3 py-2 rounded-full text-center"
+            to="/category/laptops"
+          >
+            Laptops
+          </NavLink>
         </div>
         <div>
           <Outlet></Outlet>

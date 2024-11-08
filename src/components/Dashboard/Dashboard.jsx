@@ -1,6 +1,7 @@
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import Cart from "../Cart/Cart";
+import Wishlist from "../Wishlist/Wishlist";
 const Dashboard = () => {
   return (
     <div>
@@ -25,7 +26,9 @@ const Dashboard = () => {
           <TabPanel>
             <Cart></Cart>
           </TabPanel>
-          <TabPanel>Panel 2</TabPanel>
+          <TabPanel>
+            <Wishlist></Wishlist>
+          </TabPanel>
         </div>
       </Tabs>
     </div>
